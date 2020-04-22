@@ -81,7 +81,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 7 Demo
+                    Laravel 7 Demo 
+                    <br>IP: {{ $ip }}
                 </div>
             </div>
         </div>
