@@ -15,6 +15,5 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function (Request $request) {
-    // print_r($_SERVER['SERVER_NAME']);
-    return view('welcome', ['ip' => $request->server('SERVER_NAME')]);
+    return view('welcome', ['ip' => $request->server('SERVER_ADDR')]);
 });
