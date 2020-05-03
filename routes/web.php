@@ -15,5 +15,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function (Request $request) {
-    return view('welcome', ['ip' => $request->server('SERVER_ADDR')]);
+    return response()->json([
+        'version' => 'v1'
+    ]);
 });
