@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*.serverless.my.id'],
+    'allowed_origins' => ['*.serverless.my.id', '*.cloudfront.net'],
 
     'allowed_origins_patterns' => [],
 
