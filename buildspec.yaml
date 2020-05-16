@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo pre_build start ...
+      - ls -ahl
+      - pwd
+      - curl -s https://getcomposer.org/installer | php
+      - mv composer.phar /usr/local/bin/composer
+      - echo Downloading dependencies ...
+      - composer --version
+      - composer install --prefer-dist
+      - cp .env.example .env
+      - php artisan key:generate
+      - echo pre_build finish ...
+  build:
+    commands:
+      - echo build start ...
+      - ls -ahl
+      - echo unit test
+      - vendor/bin/phpunit
+      - echo build finish ...
