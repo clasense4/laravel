@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 Route::get('/', function (Request $request) {
     return response()->json([
         'version' => 'v1',
-        'tag' => '1.1.0'
+        'tag' => '1.1.0',
+        'env' => 'staging'
     ]);
 });
