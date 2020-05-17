@@ -18,6 +18,7 @@ Route::get('/', function (Request $request) {
     return response()->json([
         'version' => 'v1',
         'tag' => '1.1.0',
-        'env' => 'staging'
+        'env' => 'staging',
+        'date' => '20200517_1325'
     ]);
 });
